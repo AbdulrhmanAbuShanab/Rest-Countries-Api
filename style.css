@@ -1,0 +1,107 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 100%);
+}
+header {
+  background-color: hsl(209, 23%, 22%);
+  height: 70px;
+  width: 100%;
+}
+header > h1 {
+  padding: 20px;
+  font-weight: 800;
+  font-size: 25px;
+}
+body {
+  background-color: hsl(207, 26%, 17%);
+}
+.searchFilter {
+  margin: 15px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 105px;
+  margin-top: 15px;
+}
+.search > input {
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  border-radius: 5px;
+  width: 450px;
+  height: 50px;
+  margin-left: -6px;
+  outline: none;
+  text-indent: 15px;
+}
+::placeholder {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+.icon {
+  background-color: hsl(209, 23%, 22%);
+  height: 50px;
+  width: 40px;
+  border-radius: 5px;
+}
+.icon > i {
+  padding: 16px;
+}
+select {
+  margin-right: 95px;
+  margin-top: 15px;
+  background-color: hsl(209, 23%, 22%);
+  height: 50px;
+  width: 175px;
+  outline: none;
+  border-color: hsl(209, 23%, 22%);
+  border-radius: 5px;
+  text-indent: 15px;
+}
+select:active {
+  border: none;
+}
+.cardsContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-top: 50px;
+}
+.cards {
+  background-color: hsl(209, 23%, 22%);
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  border-radius: 5px;
+}
+.cards > img {
+  width: 250px;
+  height: 180px;
+  border-radius: 5px 5px 0px 0px;
+}
+.texts {
+  margin-bottom: 15px;
+}
+.cards > h4,
+.texts > p {
+  margin-left: 15px;
+}
+.texts > p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.texts > p > span {
+  opacity: 70%;
+  font-weight: 300;
+}
