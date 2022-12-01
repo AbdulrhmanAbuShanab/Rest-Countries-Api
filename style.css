@@ -87,7 +87,7 @@ select:active {
 }
 .cards > img {
   width: 250px;
-  height: 180px;
+  height: 150px;
   border-radius: 5px 5px 0px 0px;
 }
 .texts {
