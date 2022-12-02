@@ -9,7 +9,6 @@ getCountries
     }
   })
   .then((json) => {
-    let input = document.querySelector("input");
     json.forEach((element) => {
       //creating countries cards
       let cards = document.createElement("div");
@@ -19,7 +18,7 @@ getCountries
       img.src = element.flags.png;
       //adding country name
       let countryName = document.createElement("h4");
-      let nodeCname = document.createTextNode(element.altSpellings[0]);
+      let nodeCname = document.createTextNode(element.name.common);
       countryName.append(nodeCname);
       //create paragraphs div
       let texts = document.createElement("div");
@@ -51,8 +50,6 @@ getCountries
       texts.append(population);
       texts.append(region);
       texts.append(capital);
-          
-      
     });
   });
 let select = document.querySelector("select");
@@ -116,6 +113,19 @@ oceania = () => {
     }
   });
 };
+//declaring search function
+search = (value) => {
+  let countryName = document.querySelectorAll("h4");
+  for (let i = 0; i < countryName.length; i++) {
+    if (countryName[i].innerHTML.toLowerCase().includes(value.toLowerCase())) {
+      countryName[i].parentElement.setAttribute("style", "display: flex");
+    } else if (value == "") {
+      countryName[i].parentElement.setAttribute("style", "display: flex");
+    } else {
+      countryName[i].parentElement.setAttribute("style", "display: none");
+    }
+  }
+};
 //filter event
 select.addEventListener("change", (event) => {
   switch (select.value) {
@@ -136,3 +146,11 @@ select.addEventListener("change", (event) => {
       break;
   }
 });
+//using setTimeout so the function works after the dom elements load
+setTimeout(function () {
+  let input = document.querySelector("input");
+  //search event
+  input.addEventListener("input", (event) => {
+    search(input.value);
+  });
+}, 2000);
