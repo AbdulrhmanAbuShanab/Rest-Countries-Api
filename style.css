@@ -93,7 +93,7 @@ select:active {
 .texts {
   margin-bottom: 15px;
 }
-.cards > h4,
+.cards > a,
 .texts > p {
   margin-left: 15px;
 }
@@ -105,4 +105,83 @@ select:active {
   opacity: 70%;
   font-weight: 300;
   margin-left: 5px;
+}
+.icon1 {
+  background-color: hsl(209, 23%, 22%);
+  height: 50px;
+  width: 40px;
+  border-radius: 5px;
+}
+.icon1 > i {
+  padding: 16px;
+}
+.button {
+  display: flex;
+  margin: 30px 0 15px 105px;
+  display: none;
+}
+.back {
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 50px;
+  margin-left: -5px;
+  font-size: 17px;
+  text-indent: -15px;
+  font-weight: 600;
+}
+.flag {
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+img {
+  width: 650px;
+  height: 450px;
+}
+.cDetails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+p:nth-child(5) {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 40%;
+}
+.details {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.border{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.border p{
+  font-size: 16px;
+  font-weight: 600;
+}
+.borderName{
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.cDetails > p{
+  font-size: 16px;
+  font-weight: 600;
+}
+.cDetails span{
+  opacity: 70%;
+  font-weight: 300;
+  margin-left: 5px;
+  font-size: 15px;
 }
